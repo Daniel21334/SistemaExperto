@@ -1,11 +1,10 @@
 let questions = [
     {
         id: 1,
-        question: "Buscas ir a algun lugar con playa?",
-        answer:"Si",
-        answer2:"No",
-       
-    }
+        question: "Que experiencia buscas:",
+        answer: "Conocer",
+        answer2:"Fiestas"
+      }
 ];
 
 let question_count = 0;
@@ -49,10 +48,10 @@ function next(){
 let user_answer = document.querySelector("li.option.active").innerHTML;
 
 if(user_answer == questions[question_count].answer){
-    location.href = "html/1.html";
+    location.href = "3.html";
 }
-else if(user_answer == questions[question_count].answer2){
-    location.href = "error.html";
+else if(user_answer ==  questions[question_count].answer2){
+    location.href = "fiestas/2.html";
 }
 
 question_count++;

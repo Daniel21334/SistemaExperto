@@ -53,6 +53,9 @@ let user_answer = document.querySelector("li.option.active").innerHTML;
 if(user_answer == questions[question_count].answer){
     location.href = "5.html";
 }
+else if (user_answer ==  questions[question_count].answer2){
+    location.href = "../error.html";
+}
 
 question_count++;
 show(question_count);

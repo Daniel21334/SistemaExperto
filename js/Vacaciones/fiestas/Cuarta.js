@@ -1,11 +1,11 @@
 let questions = [
     {
         id: 1,
-        question: "Buscas ir a algun lugar con playa?",
-        answer:"Si",
-        answer2:"No",
-       
-    }
+        question: "Viajas con:",
+        answer: "Solo",
+        answer2:"Familia",
+        answer3: "Amigos"
+      }
 ];
 
 let question_count = 0;
@@ -20,12 +20,14 @@ function show(count){
     let question = document.getElementById("questions");
     let first = questions[count].answer;
     let second = questions[count].answer2;
+    let third =  questions[count].answer3;
 
 
     question.innerHTML = `<h2>${questions[count].question}</h2>
     <ul class="option_group">
     <li class="option">${first}</li>
     <li class="option">${second}</li>
+    <li class="option">${third}</li>
     </ul>`;
     toggleActive();  
 }
@@ -49,10 +51,13 @@ function next(){
 let user_answer = document.querySelector("li.option.active").innerHTML;
 
 if(user_answer == questions[question_count].answer){
-    location.href = "html/1.html";
+    location.href = "../../../paises/Buna.html";
 }
-else if(user_answer == questions[question_count].answer2){
-    location.href = "error.html";
+else if (user_answer == questions[question_count].answer2){
+    location.href = "../../../error.html";
+}
+else if(user_answer == questions[question_count].answer3){
+    location.href = "3.html";
 }
 
 question_count++;

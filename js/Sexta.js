@@ -51,7 +51,10 @@ function next(){
 let user_answer = document.querySelector("li.option.active").innerHTML;
 
 if(user_answer == questions[question_count].answer){
-    location.href = "../index.html";
+    location.href = "../paises/sas.html";
+}
+else if(user_answer == questions[question_count].answer2){
+    location.href = "../paises/van.html";
 }
 
 question_count++;
